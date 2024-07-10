@@ -1,0 +1,66 @@
+﻿<Window x:Class="SnoopClone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnoopClone"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Label DockPanel.Dock="Bottom" Content="Status"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Top">
+                    <Button DockPanel.Dock="Right">Иконка</Button>
+                    <ComboBox/>
+                </DockPanel>
+                <TreeView>
+                    <TreeViewItem Header="[000]">
+                        <TreeViewItem Header="[001]">
+                            <TreeViewItem Header="[002]">
+                                <TreeViewItem Header="[003]">
+                                    <TreeViewItem Header="[004]">
+                                        <TreeViewItem Header="[005]"/>
+                                    </TreeViewItem>
+                                </TreeViewItem>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeView>
+            </DockPanel>
+            <TabControl Grid.Column="1">
+                <TabItem Header="Properties">
+                    <DockPanel>
+                        <Label DockPanel.Dock="Top">Type</Label>
+                        <DockPanel DockPanel.Dock="Top">
+                            <Button DockPanel.Dock="Right" HorizontalAlignment="Right">R</Button>
+                            <Button DockPanel.Dock="Right" HorizontalAlignment="Right">/\</Button>
+                            <ComboBox DockPanel.Dock="Right" />
+                            <TextBox HorizontalAlignment="Stretch"/>
+                        </DockPanel>
+                        <TabControl DockPanel.Dock="Bottom">
+                            <TabItem Header="Diagnostics">
+                                <DataGrid/>
+                            </TabItem>
+                        </TabControl>
+                        <DataGrid>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name"/>
+                                <DataGridTextColumn Header="Value"/>
+                                <DataGridTextColumn Header="Value Source"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        
+                    </DockPanel>
+                </TabItem>
+                <TabItem Header="Event">
+                    
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</Window>
